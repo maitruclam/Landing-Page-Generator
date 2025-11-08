@@ -1,0 +1,78 @@
+Original idea
+My original idea was to let my other friends who didn’t know much about API usage use KAT’s API to create their own landing page with an intuitive interface. They were already too familiar with the chat bot interface so when using the API they struggled to figure out what to do.
+
+So I installed KAT Coder via Cline in Cursor, prompted it with a long description of the site — and the output was, well… chaotic 🤣.
+
+
+By version 6, I figured out how to prompt properly. Here’s what I learned.
+
+Before reading step 1, scroll down to the bottom and read step 0 first, don’t start from step 1 like me! I promise you, you should do that.
+
+Step 1 – Simplify the prompt
+Rewrote my prompt:
+
+“Help me design a simple website that lets users add their KAT Coder-Pro-V1 API key to generate a landing page.
+Sidebar → API key field, prompt box, style dropdown, ‘Generate’ button.
+Main panel → API call results.”
+
+Result: a functional layout. Then I fine-tuned it further.
+
+Result: KAT Coder generates a basic interface that works well, I continue to tweak it. Note, this is step 3 and it’s done, I deleted the first version of step 1 and 2.
+
+
+Step 2 – Break down the task to navigate each section
+After having the basic interface, I continued to use prompts to navigate each small part (break down the task) which helps me easily control the AI-generated content and avoid it becoming a catastrophic explosion:
+
+“allow users to save the api on the page and the created landing page must be a preview interface, not the code”
+
+Then added:
+
+“allow users to save the api on the page and the created landing page must be a preview interface, not the code” 
+
+Add a list of other design styles…. (all currently displayed on the web, listing them here would be too long) not including the order number.”
+
+Next, create a preview of the design styles right on the sidebar interface to help users see what style they choose to provide a more appropriate prompt:
+“Create a preview section so that when the user selects from the dropdown, a similar block image to review in that style will appear.”
+
+Thanks to the subdivision, KAT works very smoothly and is easy to control.
+
+
+Step 3 – Add instructions, edit interface
+When my friend said “why is there no guide to get API key?”, I reminded:
+
+“Next, please help me replace the Instructions: Export VC_API_KEY=”your_api_key” section with instructions for getting the API key and link to https://www.streamlake.ai/document/DOC/mg6k6nlp8j6qxicx4c9”
+
+Then fix the interface error:
+
+“Currently, after choosing a style, the website interface is also changed, I want it to only affect the landing page the user wants to create.
+Next, redesign the website interface with Neumorphism style combined with The Google playbook”
+
+Step 4 – Add some fun
+I’m lazy to write prompt so I asked KAT to do it himself:
+
+“please help me add a small star shaped button in the “website description” section that will automatically generate a random prompt”
+
+Then improve the loading screen:
+
+“Add a new function to the current “Creating landing page… Please wait a moment” loading section to become an interface of live running code lines to reduce boredom when waiting for long time”
+
+
+Step 0 – Divide the module and beautify
+It was only then that I realized that I wasn’t sure if I was doing it correctly. However, in the process of using it, it is better to split the task into smaller parts to do it than to request many functions at once.
+
+For example, after requesting to create a platform, you will have to request to add the list style function later.
+
+In addition, you should write right at the first prompt asking KAT to separate the code into many different module folders to avoid KAT automatically dumping all the code into “please help me re-divide the functions more separately into each file, everything is being dumped and it is very difficult to track and process each module, it will make everything dumped into the “script” folder or other files.
+
+This is a funny personal mistake because I’m used to claude automatically creating different folders to hold modules.
+
+So don’t be like me, create a directory structure first 🤣🤣🤣.
+
+By the time I was almost done, it was dark and my eyes were hurting from the bright screen, so I continued to add a prompt asking:
+
+“Please help me redesign the interface using #d1fe17 as the color for the header and buttons, using white and black for most other elements and a dark background throughout the website interface”
+
+And ta-da 🎉 — over 800 lines of code in the script section still run smoothly, the result is novel.maitruclam.com .
+Oh, I also asked him to translate the entire text to English to make it more global — and he did it perfectly.
+You can download this project from Github or take it to the next level.
+
