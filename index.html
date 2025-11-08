@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page Generator - KAT-Coder-Pro-V1</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h2><i class="fas fa-rocket"></i> Landing Page Generator</h2>
+            </div>
+            
+            <div class="sidebar-content">
+                <!-- API Key Section -->
+                <div class="form-group">
+                    <label for="apiKey"><i class="fas fa-key"></i> KAT-Coder-Pro-V1 API Key</label>
+                    <div class="api-key-container">
+                        <input 
+                            type="password" 
+                            id="apiKey" 
+                            placeholder="Enter your API key"
+                            autocomplete="off"
+                        >
+                        <button id="saveApiKeyBtn" class="save-api-btn">
+                            <i class="fas fa-save"></i>
+                        </button>
+                        <div class="api-status-indicator" id="apiStatusIndicator" style="display: none;">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                    </div>
+                    <div class="api-key-hint">
+                        <small>Guide: <a href="https://www.streamlake.ai/document/DOC/mg6k6nlp8j6qxicx4c9" target="_blank" style="color: var(--primary-color); text-decoration: underline;">Get API key from StreamLake</a></small>
+                        <div class="api-key-actions">
+                            <button id="showApiKeyBtn" class="show-api-btn">
+                                <i class="fas fa-eye"></i> Show
+                            </button>
+                            <button id="clearApiKeyBtn" class="clear-api-btn">
+                                <i class="fas fa-trash"></i> Clear
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Style Selection -->
+                <div class="form-group">
+                    <label for="style"><i class="fas fa-palette"></i> Select style</label>
+                    <select id="style">
+                        <!-- Auto Mode -->
+                        <option value="auto">🤖 Auto - AI detects style automatically</option>
+                        
+                        <!-- Top Priority Styles -->
+                        <option value="minimalism">Minimalism</option>
+                        <option value="material-design">Material Design</option>
+                        <option value="flat-design">Flat Design</option>
+                        <option value="long-shadow">Flat 2.0 (Long Shadow)</option>
+                        <option value="glassmorphism">Glassmorphism</option>
+                        <option value="neumorphism">Neumorphism</option>
+                        <option value="brutalism">Brutalism</option>
+                        <option value="neo-brutalism">Neo-brutalism</option>
+                        <option value="bento-ui">Bento UI</option>
+                        <option value="gradient-mesh">Gradient Mesh / Aurora</option>
+                        <option value="corporate-memphis">Corporate Memphis</option>
+                        <option value="motion-ui">Motion UI</option>
+                        
+                        <!-- Other Popular Styles -->
+                        <option value="skeuomorphism">Skeuomorphism</option>
+                        <option value="claymorphism">Claymorphism</option>
+                        <option value="cyberpunk">Cyberpunk</option>
+                        <option value="retro-vaporwave">Retro / Vaporwave</option>
+                        <option value="y2k">Y2K</option>
+                        <option value="synthwave-outrun">Synthwave / Outrun</option>
+                        <option value="neon-noir">Neon Noir</option>
+                        
+                        <!-- Classic & Traditional -->
+                        <option value="swiss-international">Swiss / International</option>
+                        <option value="bauhaus">Bauhaus</option>
+                        <option value="digital-bauhaus">Digital Bauhaus</option>
+                        <option value="memphis">Memphis</option>
+                        <option value="art-deco">Art Deco</option>
+                        <option value="constructivism">Constructivism</option>
+                        
+                        <!-- Modern Minimal -->
+                        <option value="scandinavian-nordic">Scandinavian / Nordic</option>
+                        <option value="organic-minimal">Organic Minimal</option>
+                        <option value="tech-minimal">Tech Minimal</option>
+                        <option value="cupertino-minimal">Cupertino Minimal</option>
+                        
+                        <!-- Creative & Artistic -->
+                        <option value="maximalism">Maximalism</option>
+                        <option value="anti-design">Anti-design</option>
+                        <option value="postmodern-eclectic">Postmodern Eclectic</option>
+                        <option value="psychedelic">Psychedelic</option>
+                        <option value="grunge">Grunge</option>
+                        <option value="kawaii-pastel-pop">Kawaii / Pastel Pop</option>
+                        <option value="hand-drawn-naive">Hand-drawn / Naive</option>
+                        
+                        <!-- Special Effects -->
+                        <option value="isometric">Isometric</option>
+                        <option value="pixel-8bit">Pixel / 8-bit</option>
+                        <option value="wireframe-outline">Wireframe / Outline</option>
+                        <option value="paper-cut-collage">Paper-cut / Collage</option>
+                        <option value="risograph-print">Risograph Print</option>
+                        
+                        <!-- Nature & Organic -->
+                        <option value="organic-biomorphic">Organic / Biomorphic</option>
+                        <option value="ecobrutalism">Ecobrutalism</option>
+                        
+                        <!-- Tech & Systems -->
+                        <option value="fluent">Fluent (Microsoft)</option>
+                        <option value="terminal-retro-computer">Terminal / Retro Computer</option>
+                        
+                        <!-- Print & Editorial -->
+                        <option value="editorial-magazine">Editorial / Magazine</option>
+                        <option value="experimental-typography">Experimental Typography</option>
+                        <option value="monochrome-duotone">Monochrome / Duotone</option>
+                        
+                        <!-- Vintage & Retro -->
+                        <option value="retro-futurism">Retro-futurism</option>
+                        <option value="gothic-revival">Gothic Revival</option>
+                    </select>
+                    
+                    <!-- Style Preview Container -->
+                    <div class="style-preview-container" id="stylePreviewContainer">
+                        <div class="style-preview-header">
+                            <h4><i class="fas fa-eye"></i> Style Preview</h4>
+                        </div>
+                        <div class="style-preview-content" id="stylePreviewContent">
+                            <div class="style-preview-placeholder">
+                                <i class="fas fa-paintbrush"></i>
+                                <p>Select a style to preview</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Prompt Input -->
+                <div class="form-group">
+                    <div class="prompt-label-container">
+                        <label for="prompt"><i class="fas fa-comment-dots"></i> Website Description</label>
+                        <button id="randomPromptBtn" class="random-prompt-btn" title="Generate random prompt">
+                            <i class="fas fa-star"></i>
+                        </button>
+                    </div>
+                    <textarea 
+                        id="prompt" 
+                        rows="6" 
+                        placeholder="Describe the landing page you want to create...&#10;&#10;Example for Auto mode:&#10;- Beauty product landing page with pastel pink tones, minimalist style combined with glassmorphism&#10;- Tech website with cyberpunk effects and gradient mesh&#10;&#10;Example for specific style:&#10;- Beauty product landing page with pink tones, modern, professional"
+                    ></textarea>
+                </div>
+
+                <!-- Generate Button -->
+                <div class="form-group">
+                    <button id="generateBtn" class="generate-btn">
+                        <i class="fas fa-magic"></i>
+                        <span>Create Landing Page</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content" id="mainContent">
+            <div class="content-header">
+                <h1>Landing Page Generator</h1>
+                <div class="header-actions">
+                    <p class="credit-text-header">
+                        by <a href="https://maitrulam.com" target="_blank" class="credit-link-simple">maitrulam</a>
+                    </p>
+                    <button id="guideBtn" class="guide-btn">
+                        <i class="fas fa-book"></i> User Guide
+                    </button>
+                </div>
+            </div>
+
+            <div class="content-area">
+                <div class="welcome-screen" id="welcomeScreen">
+                    <div class="welcome-content">
+                        <i class="fas fa-rocket welcome-icon"></i>
+                        <h2>Welcome to Landing Page Generator</h2>
+                        <p>Please enter your API key and describe the website you want to create</p>
+                        <div class="welcome-steps">
+                            <div class="step">
+                                <i class="fas fa-1-circle"></i>
+                                <span>Enter KAT-Coder-Pro-V1 API key</span>
+                            </div>
+                            <div class="step">
+                                <i class="fas fa-2-circle"></i>
+                                <span>Select design style or use <strong>Auto</strong></span>
+                            </div>
+                            <div class="step">
+                                <i class="fas fa-3-circle"></i>
+                                <span>Describe your website in detail</span>
+                            </div>
+                            <div class="step">
+                                <i class="fas fa-4-circle"></i>
+                                <span>Click create and wait for results</span>
+                            </div>
+                        </div>
+                        <div class="auto-mode-hint">
+                            <i class="fas fa-lightbulb"></i>
+                            <span><strong>Tip:</strong> Choose <strong>🤖 Auto</strong> mode for AI to detect and combine multiple design styles based on your description!</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="loading-screen" id="loadingScreen" style="display: none;">
+                    <div class="loading-content">
+                        <div class="code-terminal">
+                            <div class="terminal-header">
+                                <div class="terminal-buttons">
+                                    <span class="terminal-btn close"></span>
+                                    <span class="terminal-btn minimize"></span>
+                                    <span class="terminal-btn maximize"></span>
+                                </div>
+                                <div class="terminal-title">
+                                    <i class="fas fa-terminal"></i> Generating Landing Page...
+                                </div>
+                            </div>
+                            <div class="terminal-body">
+                                <div class="code-lines" id="codeLines">
+                                    <div class="code-line">
+                                        <span class="line-number">1</span>
+                                        <span class="code-content"><span class="comment">// Initializing AI generator...</span></span>
+                                    </div>
+                                </div>
+                                <div class="terminal-cursor">
+                                    <span class="cursor-blink">█</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="preview-container" id="previewContainer" style="display: none;">
+                    <div class="preview-header">
+                        <h3>Generated Landing Page</h3>
+                        <div class="preview-actions">
+                            <button id="previewModeBtn" class="mode-btn active" data-mode="preview">
+                                <i class="fas fa-desktop"></i> Preview
+                            </button>
+                            <button id="codeModeBtn" class="mode-btn" data-mode="code">
+                                <i class="fas fa-code"></i> View Code
+                            </button>
+                            <button id="exportBtnFinal" class="export-btn">
+                                <i class="fas fa-download"></i> Download
+                            </button>
+                        </div>
+                    </div>
+                    <div class="preview-content">
+                        <div class="preview-frame" id="previewFrame">
+                            <div class="preview-inner">
+                            <!-- Landing page will be displayed here -->
+                            </div>
+                        </div>
+                        <div class="code-display" id="codeDisplay" style="display: none;">
+                            <pre><code id="generatedCode"></code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="error-container" id="errorContainer" style="display: none;">
+                    <div class="error-content">
+                        <i class="fas fa-exclamation-triangle error-icon"></i>
+                        <h3>An error occurred</h3>
+                        <p id="errorMessage"></p>
+                        <button id="retryBtn" class="retry-btn">
+                            <i class="fas fa-redo"></i> Try again
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="notification" id="notification"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
