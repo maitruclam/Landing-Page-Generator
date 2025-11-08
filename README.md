@@ -85,7 +85,7 @@ No installation required! Simply open the `index.html` file in your browser.
 ## Live Demo
 
 View the live demo: https://novel.maitruclam.com/
-Read blog of Kat: https://maitruclam.com/what-is-kat-coder/
+Read blog of Kat: https://maitruclam.com/en/what-is-kat-coder/
 
 ## API Integration
 
@@ -185,3 +185,4 @@ If you have any questions or suggestions, please create an issue on the reposito
 ---
 
 **Note**: This tool requires a valid KAT-Coder-Pro-V1 API key to function. Please ensure you have API access before using.
+
