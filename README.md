@@ -1,90 +1,95 @@
 # Landing Page Generator - KAT-Coder-Pro-V1
 
-Một công cụ tạo landing page tiên tiến, hiện đại sử dụng API KAT-Coder-Pro-V1 để tạo các trang web chuyên nghiệp chỉ with vài thao tác đơn giản. Với giao diện Neumorphism kết hợp Google Playbook, công cụ mang lại trải nghiệm người dùng tuyệt vời.
+An advanced, modern landing page creation tool using KAT-Coder-Pro-V1 API to generate professional websites with just a few simple steps. With Neumorphism interface combined with Google Playbook, the tool provides excellent user experience.
 
-## Tính năng chính
+## Key Features
 
-- **Giao diện hai phần**: Thanh bên and màn hình chính with phong cách Neumorphism
-- **Lưu trữ API Key**: Tự động lưu API key into localStorage
-- **Quản lý API Key**: Hiển thị/ẩn, lưu, xóa API key with nút check trạng thái
-- **50+ phong cách thiết kế**: Bộ sưu tập phong cách thiết kế đa dạng from Minimalism đến Cyberpunk
-- **Tự động tạo prompt**: Nút ngôi sao tạo prompt ngẫu nhiên when cần cảm hứng
-- **Preview phong cách**: Xem trước trực tiếp các phong cách before chọn
-- **Prompt mô tả**: Nhập chi tiết about landing page mong muốn
-- **Tạo landing page**: Gọi API để tạo code HTML hoàn chỉnh
-- **Giao diện loading sống động**: Hiệu ứng code đang chạy thay vì thông báo nhàm chán
-- **Xem trước trực tiếp**: Hiển thị landing page đã tạo ngay trên giao diện
-- **Chế độ xem**: Chuyển đổi between preview and code
-- **Xuất file**: Tải về file HTML hoàn chỉnh
+- **Two-panel interface**: Sidebar and main screen with Neumorphism style
+- **API Key storage**: Automatically save API key into localStorage
+- **API Key management**: Show/hide, save, delete API key with status check button
+- **50+ design styles**: Diverse collection of design styles from Minimalism to Cyberpunk
+- **Auto prompt generation**: Star button creates random prompts when inspiration is needed
+- **Style preview**: Live preview of styles before selection
+- **Description prompt**: Enter detailed requirements about desired landing page
+- **Landing page creation**: Call API to generate complete HTML code
+- **Dynamic loading interface**: Code running animation instead of boring loading messages
+- **Live preview**: Display created landing page directly on the interface
+- **View modes**: Switch between preview and code display
+- **File export**: Download complete HTML file
 
-## Cấu trúc file
+## File Structure
 
 ```
 landingpage/
-├── index.html          # Trang chủ
+├── index.html          # Main page
 ├── styles.css          # CSS styling
 ├── script.js           # JavaScript functionality
 └── README.md           # Documentation
 ```
 
-## Cài đặt and sử dụng
+## Installation and Usage
 
-### 1. Cài đặt
+### 1. Installation
 
-Không need cài đặt gì cả! Chỉ need mở file `index.html` trong trình duyệt.
+No installation required! Simply open the `index.html` file in your browser.
 
-### 2. Cấu hình API
+### 2. API Configuration
 
-1. **Chuẩn bị API Key**: Đảm bảo bạn có API key KAT-Coder-Pro-V1 hợp lệ
-2. **Nhập API Key**: Dán API key vào trường "KAT-Coder-Pro-V1 API Key" trong thanh bên
+1. **Prepare API Key**: Ensure you have a valid KAT-Coder-Pro-V1 API key
+2. **Enter API Key**: Paste your API key into the "KAT-Coder-Pro-V1 API Key" field in the sidebar
 
-### 3. Sử dụng
+### 3. Usage
 
-1. **Quản lý API Key**:
-   - Dán API key into ô nhập liệu
-   - Nhấn nút 💾 để lưu API key (tự động lưu vào localStorage)
-   - Sử dụng nút "Hiển thị/Ẩn" để xem hoặc ẩn API key
-   - Nhấn "Xóa" để xóa API key đã lưu
-   - Nút check màu xanh hiển thị trạng thái kết nối
+1. **API Key Management**:
+   - Paste your API key into the input field
+   - Click the 💾 button to save API key (automatically saved to localStorage)
+   - Use the "Show/Hide" button to view or hide your API key
+   - Click "Delete" to remove your saved API key
+   - Green check button displays connection status
 
-2. **Chọn phong cách**: Chọn một trong 50+ phong cách thiết kế:
-   - **Auto**: AI tự động chọn phong cách phù hợp
-   - **Minimalism**: Tối giản, whitespace, form đơn giản
+2. **Choose Style**: Select from 50+ design styles:
+   - **Auto**: AI automatically selects appropriate style
+   - **Minimalism**: Clean, whitespace, simple forms
    - **Material Design**: Google's design system, cards, shadows
    - **Glassmorphism**: Frosted glass, blurred backgrounds
    - **Neumorphism**: Soft embossed surfaces, subtle shadows
    - **Brutalism**: Raw, concrete textures, bold typography
    - **Cyberpunk**: Sci-fi, neon accents, futuristic
-   - **Và 40+ phong cách khác**: Flat, Retro, Art Deco, v.v.
+   - **And 40+ more styles**: Flat, Retro, Art Deco, etc.
 
-3. **Tạo cảm hứng**: Sử dụng nút ngôi sao ⭐ để create prompt ngẫu nhiên
-   - Nhấn vào nút ngôi sao bên cạnh ô mô tả
-   - Prompt ngẫu nhiên will be điền tự động
-   - Có thể chỉnh sửa prompt after when điền
+3. **Generate Inspiration**: Use the star button ⭐ to create random prompts
+   - Click the star button next to the description field
+   - Random prompt will be automatically filled
+   - You can edit the prompt after it's filled
 
-4. **Mô tả website**: Nhập chi tiết about landing page bạn muốn tạo
-   - Mô tả sản phẩm/dịch vụ
-   - Màu sắc mong muốn
-   - Tính năng cần có
-   - Đối tượng khách hàng
-   - Phong cách mong muốn
+4. **Describe Website**: Enter details about the landing page you want to create
+   - Product/service description
+   - Desired colors
+   - Required features
+   - Target audience
+   - Preferred style
 
-5. **Xem trước phong cách**: Di chuột qua các phong cách để xem preview
-   - Preview hiển thị trực tiếp when chọn phong cách
-   - Xem mô tả chi tiết về từng phong cách
+5. **Preview Styles**: Hover over styles to see live previews
+   - Preview displays directly when selecting style
+   - View detailed descriptions of each style
 
-6. **Tạo landing page**: Nhấn nút "Tạo Landing Page" and chờ kết quả
-   - Giao diện loading hiển thị hiệu ứng code đang chạy
-   - Thời gian chờ trở nên thú vị hơn
+6. **Create Landing Page**: Click "Create Landing Page" and wait for results
+   - Loading interface displays code running animation
+   - Waiting time becomes more interesting
 
-7. **Xem kết quả**:
-   - **Preview**: Xem landing page đã tạo trực tiếp trên giao diện
-   - **Code**: Chuyển sang chế độ xem code HTML
-   - **Tải xuống**: Nhấn "Tải xuống" để xuất file HTML
+7. **View Results**:
+   - **Preview**: View created landing page directly on the interface
+   - **Code**: Switch to HTML code view mode
+   - **Download**: Click "Download" to export HTML file
+
+## Live Demo
+
+View the live demo: https://novel.maitruclam.com/
+Read blog of Kat: https://maitruclam.com/what-is-kat-coder/
 
 ## API Integration
 
-Website sử dụng API Vanchin Streamlake theo định dạng:
+Website uses Vanchin Streamlake API in the following format:
 
 ```bash
 curl 'https://vanchin.streamlake.ai/api/gateway/v1/endpoints/chat/completions' \
@@ -105,78 +110,78 @@ curl 'https://vanchin.streamlake.ai/api/gateway/v1/endpoints/chat/completions' \
 }'
 ```
 
-## Giao diện
+## Interface
 
-### Thanh bên (Sidebar)
-- **Quản lý API Key**: Nhập, lưu, hiển thị/ẩn, xóa API key
-- Chọn phong cách thiết kế
-- Ô nhập mô tả chi tiết
-- Nút tạo landing page
-- Trạng thái kết nối API
+### Sidebar
+- **API Key Management**: Input, save, show/hide, delete API key
+- Style selection
+- Detailed description input
+- Create landing page button
+- API connection status
 
-### Màn hình chính
-- **Welcome Screen**: Hướng dẫn sử dụng
-- **Loading Screen**: Hiển thị when đang tạo
-- **Preview Container**: Hiển thị landing page dạng preview hoặc code
-- **Error Container**: Hiển thị thông báo lỗi
+### Main Screen
+- **Welcome Screen**: Usage instructions
+- **Loading Screen**: Displayed during creation
+- **Preview Container**: Display landing page in preview or code mode
+- **Error Container**: Display error messages
 
-## Tính năng nâng cao
+## Advanced Features
 
-- **Responsive Design**: Giao diện thích ứng with mọi kích cỡ màn hình
-- **Real-time Validation**: Kiểm tra API key ngay when nhập
-- **Error Handling**: Xử lý lỗi API and thông báo rõ ràng
-- **Code Extraction**: Tự động trích xuất code HTML from response
-- **Notification System**: Thông báo trạng thái hoạt động
-- **Dark Code Editor**: Hiển thị code with nền tối dễ đọc
-- **Style Preview System**: Xem trước trực tiếp các phong cách thiết kế
-- **Random Prompt Generator**: Tạo prompt ngẫu nhiên with nút ngôi sao
-- **Dynamic Loading Animation**: Hiệu ứng code đang chạy when chờ API
-- **LocalStorage Integration**: Lưu trữ API key and cài đặt người dùng
-- **Multi-style Support**: Hỗ trợ 50+ phong cách thiết kế khác nhau
-- **Auto-style Detection**: AI tự động chọn phong cách phù hợp
+- **Responsive Design**: Interface adapts to all screen sizes
+- **Real-time Validation**: Check API key immediately upon input
+- **Error Handling**: Handle API errors and display clear messages
+- **Code Extraction**: Automatically extract HTML code from response
+- **Notification System**: Notify activity status
+- **Dark Code Editor**: Display code with dark background for easy reading
+- **Style Preview System**: Live preview of design styles
+- **Random Prompt Generator**: Create random prompts with star button
+- **Dynamic Loading Animation**: Code running effects while waiting for API
+- **LocalStorage Integration**: Store API keys and user settings
+- **Multi-style Support**: Support 50+ different design styles
+- **Auto-style Detection**: AI automatically selects appropriate style
 
-## Yêu cầu hệ thống
+## System Requirements
 
-- **Trình duyệt**: Chrome 80+, Firefox 75+, Safari 13+, Edge 80+
-- **JavaScript**: Bật JavaScript
-- **Internet**: Kết nối internet để gọi API
+- **Browser**: Chrome 80+, Firefox 75+, Safari 13+, Edge 80+
+- **JavaScript**: JavaScript enabled
+- **Internet**: Internet connection to call API
 
-## Bảo mật
+## Security
 
-- API Key được lưu trữ tạm thời trong memory
-- Không lưu trữ API Key trên server
-- Tất cả request được mã hóa HTTPS
+- API keys are stored temporarily in memory
+- No API keys stored on servers
+- All requests are HTTPS encrypted
 
-## Hỗ trợ
+## Support
 
-Nếu gặp vấn đề:
-1. Kiểm tra API Key có hợp lệ không
-2. Kiểm tra kết nối internet
-3. Kiểm tra định dạng prompt
-4. Thử lại with prompt đơn giản hơn
+If you encounter issues:
+1. Check if your API key is valid
+2. Check your internet connection
+3. Check prompt format
+4. Try again with a simpler prompt
 
-## Cập nhật
+## Updates
 
-- **v1.0.0**: Phát hành ban đầu
-  - Giao diện hai phần
-  - 6 phong cách thiết kế
-  - Tích hợp API KAT-Coder-Pro-V1
-  - Chức năng xem trước, sao chép, xuất file
+- **v1.0.0**: Initial release
+  - Two-panel interface
+  - 6 design styles
+  - KAT-Coder-Pro-V1 API integration
+  - Preview, copy, export functions
 
-- **v1.1.0**: Cập nhật lớn
-  - **Nâng cấp giao diện**: Thiết kế lại with phong cách Neumorphism kết hợp Google Playbook
-  - **Mở rộng phong cách**: Tăng from 6 lên 50+ phong cách thiết kế
-  - **Tự động tạo prompt**: Thêm nút ngôi sao tạo prompt ngẫu nhiên
-  - **Preview phong cách**: Xem trước trực tiếp các phong cách before chọn
-  - **Loading animation**: Hiệu ứng code đang chạy thay vì thông báo nhàm chán
-  - **Cải thiện UI/UX**: Nút check trạng thái, thiết kế hiện đại, responsive tốt hơn
-  - **Tối ưu hóa hiệu suất**: Loading nhanh hơn, xử lý lỗi tốt hơn
-  - **Cập nhật documentation**: README đầy đủ, hướng dẫn chi tiết
+- **v1.1.0**: Major update
+  - **Interface upgrade**: Redesigned with Neumorphism combined with Google Playbook
+  - **Style expansion**: Increased from 6 to 50+ design styles
+  - **Auto prompt generation**: Added star button for random prompts
+  - **Style preview**: Live preview of styles before selection
+  - **Loading animation**: Code running effects instead of boring messages
+  - **UI/UX improvement**: Status check button, modern design, better responsiveness
+  - **Performance optimization**: Faster loading, better error handling
+  - **Documentation update**: Complete README, detailed instructions
 
-## Liên hệ
+## Contact
 
-Nếu bạn có bất kỳ câu hỏi hoặc góp ý nào, vui lòng tạo issue trên repository hoặc liên hệ trực tiếp.
+If you have any questions or suggestions, please create an issue on the repository or contact directly.
 
 ---
 
-**Lưu ý**: Công cụ này yêu cầu API key KAT-Coder-Pro-V1 hợp lệ để hoạt động. Vui lòng đảm bảo bạn có quyền truy cập vào API trước when sử dụng.
+**Note**: This tool requires a valid KAT-Coder-Pro-V1 API key to function. Please ensure you have API access before using.
